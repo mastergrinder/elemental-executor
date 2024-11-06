@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Roll Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elemental Executor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
+  <header>
+    <h1>Elemental Executor</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Shop (Coming Soon)</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <div id="logo">Pet Roll Game</div>
-        <a href="store.html" id="store-button">Store</a>
-    </header>
+  <main>
+    <section class="hero">
+      <h2>Master the Elements, Command Your Destiny</h2>
+      <p>Harness the power of fire, water, earth, and air with Elemental Executor. We offer unique tools and resources to help you connect with the natural world and unlock your potential.</p>
+      <a href="#">Learn More</a>
+    </section>
 
-    <main class="game-container">
-        <section class="egg-section">
-            <button id="egg-button" onclick="rollPet()"></button>
-        </section>
-        <section class="info-section">
-            <div id="result">Click the egg to roll a pet!</div>
-            <img id="pet-image" src="" alt="Pet Image">
-            <div id="currency">Coins: 0</div>
-        </section>
-    </main>
+    <section class="elements">
+      <h2>The Four Elements</h2>
+      <div class="element">
+        <img src="images/fire.png" alt="Fire Element">
+        <h3>Fire</h3>
+        <p>Represents passion, drive, and transformation.</p>
+      </div>
+      <div class="element">
+        <img src="images/water.png" alt="Water Element">
+        <h3>Water</h3>        
+        <p>Represents intuition, emotions, and healing.</p>
+      </div>
+      <div class="element">
+        <img src="images/earth.png" alt="Earth Element">
+        <h3>Earth</h3>
+        <p>Represents stability, grounding, and growth.</p>
+      </div>
+      <div class="element">
+        <img src="images/air.png" alt="Air Element">
+        <h3>Air</h3>
+        <p>Represents intellect, communication, and inspiration.</p>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="testimonials">
+      <h2>Testimonials</h2>
+      <p>"Elemental Executor helped me connect with my inner fire and achieve my goals!" - John Doe</p>
+      <p>"Their resources have been invaluable in understanding the power of the elements." - Jane Smith</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Elemental Executor. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
