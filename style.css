@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050505;
+    background-image: 
+        radial-gradient(circle at center, rgba(40, 40, 40, 0.3) 2px, transparent 2px),
+        linear-gradient(rgba(255, 0, 0, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.01) 1px, transparent 1px),
+        radial-gradient(circle at 20% 20%, rgba(255, 0, 0, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.02) 0%, transparent 50%);
+    background-size: 
+        20px 20px,
+        30px 30px, 
+        30px 30px,
+        100% 100%,
+        100% 100%;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.2rem 3rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(255, 0, 0, 0.15);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #fff, #ddd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 6px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff3333;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #ff3333;
+}
+
+.hero {
+    padding-top: 120px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: radial-gradient(circle at top right, rgba(255, 0, 0, 0.1), transparent 60%),
+                radial-gradient(circle at bottom left, rgba(255, 0, 0, 0.05), transparent 60%);
+}
+
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 51, 51, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 6s infinite ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 51, 51, 0.2);
+}
+
+.floating-icon i {
+    font-size: 2rem;
+    color: #ff3333;
+}
+
+.floating-icon:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.floating-icon:nth-child(2) {
+    top: 30%;
+    right: 20%;
+    animation-delay: -2s;
+}
+
+.floating-icon:nth-child(3) {
+    bottom: 30%;
+    left: 30%;
+    animation-delay: -4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ff3333, #ff6666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 51, 51, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #cccccc;
+    max-width: 700px;
+    line-height: 1.6;
+    padding: 0 2rem;
+}
+
+.download-btn {
+    background: #ff3333;
+    color: white;
+    padding: 1rem 2rem;
+    border: 2px solid #ff3333;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: all 0.25s ease;
+}
+
+.download-btn:hover {
+    background: transparent;
+    border-color: #ff6666;
+    transform: translateY(-3px);
+}
+
+.section {
+    padding: 100px 0;
+    width: 100%;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    color: #ff3333;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff3333, transparent);
+}
+
+.platforms-container, .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.platforms, .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.platform-box, .feature-box {
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.9), rgba(25, 25, 25, 0.9));
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(255, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 51, 51, 0.1);
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.platform-box:hover, .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(255, 0, 0, 0.2);
+    border-color: rgba(255, 51, 51, 0.3);
+}
+
+.platform-box i, .feature-box i {
+    font-size: 2.5rem;
+    color: #ff3333;
+    margin-bottom: 1.5rem;
+}
+
+.platform-box h3, .feature-box h3 {
+    color: #ff3333;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.platform-box p, .feature-box p {
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+.about-section {
+    background-color: rgba(5, 5, 5, 0.95);
+    background-image: 
+        radial-gradient(circle at center, rgba(40, 40, 40, 0.3) 2px, transparent 2px),
+        linear-gradient(rgba(255, 0, 0, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.01) 1px, transparent 1px),
+        radial-gradient(circle at 20% 20%, rgba(255, 0, 0, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.02) 0%, transparent 50%);
+    background-size: 
+        20px 20px,
+        30px 30px, 
+        30px 30px,
+        100% 100%,
+        100% 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.about-content {
+    color: #dddddd;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.95);
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
